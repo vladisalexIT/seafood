@@ -11,11 +11,12 @@ $(function () {
     
 
     $('.product__name').slick({
-        slidesToShow: 6,
+        slidesToShow: 4,
         slidesToScroll: 1,
         focusOnSelect: true,
         asNavFor: '.product__content',
         vertical: true,
+        centerMode: true,
         prevArrow: '<button type="button" class="product-prev"><img src="./icons/product-arrow-up.svg" alt=""></button>',
         nextArrow: '<button type="button" class="product-next"><img src="./icons/product-arrow-down.svg" alt=""></button>',
         onInit: function (slick) {
