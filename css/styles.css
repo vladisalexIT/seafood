@@ -200,10 +200,10 @@ button {
   (за исключением тех, у которых уже указан
   атрибут fill со значением 'none' или начинается с 'url')
  */
-:where([fill]:not([fill="none"],
+/* :where([fill]:not([fill="none"],
         [fill^="url"])) {
     fill: currentColor;
-}
+} */
 
 /**
   Приводим к единому цвету svg-элементы
@@ -703,8 +703,6 @@ h6 {
     color: var(--color-dark-grey);
 }
 
-
-
 .seafood__text:not(:last-child) {
     margin-bottom: 20px;
 }
@@ -726,4 +724,68 @@ h6 {
     font-size: 18px;
     text-align: center;
     color: var(--color-dark-grey);
+}
+
+.contacts {
+    max-width: 1920px;
+    margin-inline: auto;
+    background: url(../images/contacts-bg.jpg) bottom left/contain no-repeat;
+}
+
+.contacts__box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin-left: auto;
+    width: 402px;
+    padding: 33px 0 33px 20px;
+    background-color: var(--color-light);
+}
+
+.contacts__box-text {
+    width: 195px;
+    font-family: var(--font-family-accent);
+    font-size: 18px;
+    color: var(--color-blue);
+}
+
+.contacts__box-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    font-size: 18px;
+}
+
+.contacts__box-item span {
+    display: block;
+}
+
+.footer {
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    column-gap: 20px;
+    padding-left: 23px;
+    padding-right: 45px;
+
+}
+
+.footer__social-list {
+    display: flex;
+    column-gap: 10px;
+    padding-bottom: 15px;
+}
+
+.footer__social-item:hover path {
+    fill: var(--color-blue);
+}
+
+.footer__inner .menu {
+    padding-bottom: 27px;
+
 }
