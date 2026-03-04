@@ -8,7 +8,7 @@ $(function () {
         prevArrow: '<button type="button" class="slick-prev slider-arrow"><img src="./icons/slider-arrow-top.svg" alt=""></button>',
         nextArrow: '<button type="button" class="slick-next slider-arrow"><img src="./icons/slider-arrow-down.svg" alt=""></button>',
     })
-    
+
 
     $('.product__name').slick({
         slidesToShow: 4,
@@ -29,8 +29,18 @@ $(function () {
         asNavFor: '.product__name',
         vertical: true,
         arrows: false,
-        
+
+    });
+
+
+    $('.menu__list-burger-button').on('click', function() {
+        // Переключаем класс для выезда меню
+        $('.menu__list').toggleClass('menu__list--active');
+        // Переключаем класс для анимации кнопки в крестик
+        $(this).toggleClass('menu__list-burger-button--active');
     });
 })
+
+
 
 
