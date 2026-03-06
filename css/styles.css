@@ -702,6 +702,7 @@ h6 {
 .seafood__item {
     display: flex;
     justify-content: space-between;
+    column-gap: 20px;
 }
 
 .seafood__item--text-right {
@@ -826,12 +827,42 @@ h6 {
     .header__phone img {
         flex-shrink: 0;
     }
+
+    .contacts {
+        background-size: cover;
+    }
+
 }
 
 @media (max-width: 1160px) {
     .product__name {
         max-width: 350px;
     }
+
+
+}
+
+@media (max-width: 1080px) {
+    .seafood__item {
+        flex-direction: column;
+        row-gap: 30px;
+        align-items: center;
+    }
+
+    .seafood__item:nth-child(odd) {
+        flex-direction: column-reverse;
+    }
+
+    .seafood__item--text-right {
+        margin-right: 0;
+    }
+
+    .seafood__content,
+    .seafood__text {
+        max-width: none;
+    }
+
+
 }
 
 @media (max-width: 1000px) {
@@ -889,7 +920,6 @@ h6 {
     .product__name {
         max-width: 250px;
     }
-
 }
 
 @media (max-width: 915px) {
@@ -944,6 +974,8 @@ h6 {
         background-color: var(--color-blue);
     }
 
+
+
 }
 
 @media (max-width: 745px) {
@@ -953,8 +985,48 @@ h6 {
         text-align: center;
     }
 
-    .product {
-        padding-top: 50px;
+    .product,
+    .seafood-box,
+    .seafood {
+        padding-block: 60px;
+    }
+
+    .seafood-box__items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        justify-self: center;
+        gap: clamp(20px, 13.4vw, 100px);
+    }
+
+    .seafood-box {
+        background: linear-gradient(to bottom,
+                #003d5b 0%,
+                #005a82 35%,
+                #0086bc 50%,
+                #005a82 65%,
+                #003d5b 100%);
+    }
+
+    .seafood__item-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .seafood__items:not(:last-child) {
+        margin-bottom: 60px;
+    }
+
+    .seafood__text--last:not(:last-child) {
+        margin-bottom: 40px;
+    }
+
+    .seafood__title:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .seafood__quote-text {
+        font-size: 16px;
     }
 }
 
@@ -964,18 +1036,13 @@ h6 {
         width: 100%;
         margin: 0 auto;
         overflow: hidden;
-        /* Скрываем вылезающие элементы */
     }
 
-    /* Слайды */
     .product__content .slick-slide {
         outline: none !important;
         margin: 10px 0 !important;
         height: 660px !important;
-        /* Равномерные отступы между слайдами */
     }
-
-
 
     .product__content-box {
         flex-direction: column;
@@ -1006,12 +1073,17 @@ h6 {
     .product__content-list {
         max-height: 205px;
     }
-
-
-
 }
 
 @media (max-width: 470px) {
+    .header__logo img {
+        width: 75%;
+    }
+
+    .title {
+        font-size: 34px;
+    }
+
     .header__top {
         padding-top: 5px;
     }
@@ -1066,15 +1138,19 @@ h6 {
         margin-left: calc(100% - 50px);
         margin-top: 100px;
     }
-}
 
-@media (max-width: 470px) {
+    .seafood-box__items {
 
-    .header__logo img {
-        width: 75%;
+        grid-template-columns: 1fr;
     }
 
-    .title {
-        font-size: 34px;
+    .contacts {
+        background: none;
+
+    }
+
+    .contacts__box {
+        padding-inline: 0;
+        width: 100%;
     }
 }
