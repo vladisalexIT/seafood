@@ -828,6 +828,12 @@ h6 {
     }
 }
 
+@media (max-width: 1160px) {
+    .product__name {
+        max-width: 350px;
+    }
+}
+
 @media (max-width: 1000px) {
 
     .menu {
@@ -843,6 +849,7 @@ h6 {
         position: absolute;
         left: 20%;
         right: 20%;
+        z-index: 1000;
         flex-direction: column;
         row-gap: 30px;
         padding-top: 18px;
@@ -879,6 +886,64 @@ h6 {
         transform: translateY(50%) rotate(-45deg);
     }
 
+    .product__name {
+        max-width: 250px;
+    }
+
+}
+
+@media (max-width: 915px) {
+    .product__inner {
+        flex-direction: column;
+    }
+
+    .product__name {
+        position: relative;
+        max-width: 100%;
+        padding-top: 0;
+        padding-bottom: 60px;
+    }
+
+
+    .product__content {
+        margin-inline: auto;
+    }
+
+    .product__name-title {
+        height: 60px;
+        padding-inline: 30px;
+        margin-inline: 30px;
+        margin-bottom: 20px !important;
+        font-size: 22px;
+    }
+
+    .product__name-title.slick-current {
+        font-size: 33px;
+    }
+
+    .product__name .slick-dots {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 60%;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 20px;
+    }
+
+    .product__name .slick-dots button {
+        width: 10px;
+        aspect-ratio: 1;
+        font-size: 0;
+        padding: 0;
+        border-radius: 50%;
+        background-color: var(--color-light-grey);
+    }
+
+    .product__name .slick-active button {
+        background-color: var(--color-blue);
+    }
+
 }
 
 @media (max-width: 745px) {
@@ -887,6 +952,63 @@ h6 {
         max-width: 100%;
         text-align: center;
     }
+
+    .product {
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 630px) {
+    .product__content {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        /* Скрываем вылезающие элементы */
+    }
+
+    /* Слайды */
+    .product__content .slick-slide {
+        outline: none !important;
+        margin: 10px 0 !important;
+        height: 660px !important;
+        /* Равномерные отступы между слайдами */
+    }
+
+
+
+    .product__content-box {
+        flex-direction: column;
+        row-gap: 8px;
+    }
+
+    .product__content-list {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .product__content-title:not(:last-child) {
+        margin-bottom: 2px;
+    }
+
+    .product__content-item:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    .product__content-description:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    .product__content-element {
+        padding-bottom: 10px !important;
+    }
+
+    .product__content-list {
+        max-height: 205px;
+    }
+
+
+
 }
 
 @media (max-width: 470px) {
@@ -908,12 +1030,12 @@ h6 {
     }
 
     .header__content {
-        justify-content: center;
         margin-top: -54px;
     }
 
     .title {
         padding-top: 0;
+        margin-bottom: 125px;
     }
 
     .header-slider {
@@ -948,7 +1070,7 @@ h6 {
 
 @media (max-width: 470px) {
 
-    .header__logo img { 
+    .header__logo img {
         width: 75%;
     }
 
